@@ -1,7 +1,20 @@
 <template lang="">
-
   <div>
     <div class="carrousel" id="carousel">
+      <div class="appbar">
+        <div class="menu">
+            <img src="../assets/img/barratour2.png" alt="">
+            <div class="link-menu">
+                <a  href="">Home</a>
+                <a href="">About</a>
+                <a href="">Comerce</a>
+                <a href="">Donate</a>  
+                <a href="">Contact</a>
+            </div>
+        </div>
+    </div>
+
+
       <div class="container">
         <h1 class="header">
           Barra do Sul
@@ -14,7 +27,7 @@
   <div class="comerce-section">
     <div class="carrousel2">
       <div class="suport-top">
-        <h2>Comercios varejistas</h2>
+        <h2>Descubra os melhores da cidade</h2>
       <div class="suport-left">
       <div class="suport-wrapper">
         <div id="div" class="suport-column">
@@ -56,29 +69,66 @@
             <div class="details-shop">Produtos Disponiveis em comercios locais</div>
           </div>
         </div>
-
-        <div class="products-list-wraper">
-          <div class="products-list">
-            <div role="listitem">
-
-              <div class="shop-item-wrapper">
-                <a href="">
-                  <div class="shop-image tumbler-1"></div>
-                  <div class="shop-details-item">
-                    <div class="shop-details-left">
-                      <div class="shop-item-name">
-                        teste
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <div class="shop-button">
-                  <a href="" class="btn w-button">detalhes</a>
-                </div>
-              </div>
-            </div>
+        <div class="products-grid">
+          <div class="card">
+            <h3>Card 1</h3>
+            <p>Conteúdo do Card 1</p>
           </div>
-        </div>  
+        
+          <!-- Card 2 -->
+          <div class="card">
+            <h3>Card 2</h3>
+            <p>Conteúdo do Card 2</p>
+          </div>
+        
+          <!-- Card 3 -->
+          <div class="card">
+            <h3>Card 3</h3>
+            <p>Conteúdo do Card 3</p>
+          </div>
+        
+          <!-- Card 4 -->
+          <div class="card">
+            <h3>Card 4</h3>
+            <p>Conteúdo do Card 4</p>
+          </div>
+        
+          <!-- Card 5 -->
+          <div class="card">
+            <h3>Card 5</h3>
+            <p>Conteúdo do Card 5</p>
+          </div>
+        
+          <!-- Card 6 -->
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Conteúdo do Card 6</p>
+          </div>
+        </div>
         <div class="shop-more">
           <a href="" class="btn dark w-button">Ver todos os produtos</a>
         </div>
@@ -126,6 +176,24 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 12px;
+  justify-items: stretch;
+  align-items: stretch;
+}
 
 
 .shop-more{
@@ -265,7 +333,7 @@ h2{
   padding-top: 20px;
   color: #333;
   padding-bottom: 20px;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1.2;
   display: flex;
   letter-spacing: 5px;
@@ -283,7 +351,7 @@ h2{
 
 .carrousel {
   min-height: 550px;
-  background-image: linear-gradient(400deg, #222, rgba(34, 34, 34, 0)), url(../assets/img/mulher-dancando.jpg);
+  background-image: linear-gradient(10deg, #222, rgba(34, 34, 34, 0)), url(../assets/img/mulher-dancando.jpg);
   background-position: 0px 0px, 30% 30%;
   background-size: auto, cover;
   min-height: 650px;
