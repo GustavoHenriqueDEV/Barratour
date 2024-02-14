@@ -30,7 +30,7 @@
  .appbar{
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #eb5757;
+    background-color: #f8e536e8;
  }
 .nav{
     display: block;
