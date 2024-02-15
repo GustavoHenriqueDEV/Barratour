@@ -22,17 +22,21 @@
     justify-content: space-between;
     margin-right: 10rem;
     align-items:center;
+    margin-left: 30px;
+
 }
 a{
     font-family: Sen, sans-serif;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
-    font-size: 1.1rem
-}
+    font-size: 1.3rem;
+
+  }
 
 .link-menu {
     display: flex;
     gap: 45px;
+
   }
 
 img{

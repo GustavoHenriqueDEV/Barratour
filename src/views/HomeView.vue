@@ -23,14 +23,13 @@
           Em um só lugar
 
         </h1>
-        <a href="" class="btn  h-button tracking-in-expand-fwd-bottom">Descubra os serviços</a>
-
+        <a href="" class="btn  h-button tracking-in-expand-fwd-bottom" @click="scrollToTarget">Descubra os serviços</a>
       </div>
     </div>
   </div>
   <div class="comerce-section">
     <div class="carrousel2">
-      <div class="suport-top">
+      <div class="suport-top" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }" >
         <h2>Descubra os melhores da cidade</h2>
       <div class="suport-left">
       <div class="suport-wrapper">
@@ -56,8 +55,8 @@
 
     <div class="helper-section">
       <div class="carrousel3">
-        <div class="helper-suport-text">
-        <h3 class="helper-text">Tudo que você precisa
+        <div class="helper-suport-text" >
+        <h3 class="helper-text" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }">Tudo que você precisa
           <br>
           Em um só lugar
         </h3>
@@ -82,8 +81,8 @@
     </div>
 
 
-    <div class="carrousel6">
-    <div class="inf-text"><h1 class="inf-text">Procurando por um serviço?</h1></div>
+    <div class="carrousel6" >
+    <div  id="targetSection" class="inf-text"><h1 class="inf-text">Procurando por um serviço?</h1></div>
       <div class="inf-section">
 
         <InfSection/>
@@ -117,29 +116,51 @@ export default {
   },
   data() {
     return {
+
+      isScrolled:false,
       backgrounds: [
         require('../assets/img/casal.jpg'),
   
-        // Adicione quantas imagens quiser
       ],
       currentBackgroundIndex: 1
     };
   },
   mounted() {
-    this.startCarousel();
+
+
+    if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', this.handleScroll);
+        }
+
+   
+  },
+  beforeUnmount() {
+    if (typeof window !== 'undefined') {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
   },
   methods: {
-    startCarousel() {
-      setInterval(() => {
-        this.changeBackground();
-      }, 222000); // Mude para o intervalo desejado em milissegundos (5 segundos neste exemplo)
+
+    scrollToTarget(event) {
+      event.preventDefault();
+      const targetSection = document.getElementById('targetSection');
+
+      if (targetSection) {
+        // Opções para o comportamento da rolagem
+        const options = {
+          top: targetSection.offsetTop,
+          behavior: 'smooth', // rolar suavemente
+        };
+
+        // Aplica a rolagem suave
+        window.scrollTo(options);
+      }
     },
-    changeBackground() {
-  const carousel = document.getElementById('carousel');
-  this.currentBackgroundIndex = (this.currentBackgroundIndex + 1) % this.backgrounds.length;
-  carousel.style.backgroundImage = `linear-gradient(400deg, #222, rgba(34, 34, 34, 0)), url(${this.backgrounds[this.currentBackgroundIndex]})`;
-  
-}
+     
+    
+      handleScroll(){
+        this.isScrolled = window.scrollY > 0
+      }
   }
 };
 
@@ -148,8 +169,14 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
+
 .tracking-in-expand-fwd-bottom {
-	animation: tracking-in-expand-fwd-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  opacity: 0; /* Inicialmente, define a opacidade para 0 */
+}
+
+
+.tracking-in-expand-fwd-bottom {
+	animation: tracking-in-expand-fwd-bottom 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @keyframes tracking-in-expand-fwd-bottom {
@@ -166,6 +193,35 @@ export default {
     opacity: 1;
   }
 }
+
+
+.tracking-in-expand-fwd-bottom2 {
+  opacity: 0; /* Inicialmente, define a opacidade para 0 */
+}
+
+
+.tracking-in-expand-fwd-bottom2 {
+	animation: tracking-in-expand-fwd-bottom 2.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand-fwd-bottom2 {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
 
 
 
@@ -332,7 +388,7 @@ margin-bottom: 15px;
 .products-section{
   padding-top: 65px;
   padding-bottom: 65px;
-  background-color: #333;
+  background-color: rgb(240, 235, 235);
 }
 
 
