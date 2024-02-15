@@ -5,7 +5,7 @@
         <div class="menu">
             <img src="../assets/img/barratour2.png" alt="">
             <div class="link-menu">
-                <a  href="">Home</a>
+                <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Comerce</a>
                 <a href="">Donate</a>  
@@ -16,11 +16,15 @@
 
 
       <div class="container">
-        <h1 class="header">
+        
+        <h1 class="header tracking-in-expand-fwd-bottom">
           Barra do Sul
           <br>
           Em um só lugar
+
         </h1>
+        <a href="" class="btn  h-button tracking-in-expand-fwd-bottom">Descubra os serviços</a>
+
       </div>
     </div>
   </div>
@@ -62,7 +66,6 @@
     </div>
 
     <div class="products-section">
-
       <div class="carrousel4">
         <div class="shop-text-wraper">
           <div class="suport-top-left">
@@ -70,64 +73,7 @@
           </div>
         </div>
         <div class="products-grid">
-          <div class="card">
-            <h3>Card 1</h3>
-            <p>Conteúdo do Card 1</p>
-          </div>
-        
-          <!-- Card 2 -->
-          <div class="card">
-            <h3>Card 2</h3>
-            <p>Conteúdo do Card 2</p>
-          </div>
-        
-          <!-- Card 3 -->
-          <div class="card">
-            <h3>Card 3</h3>
-            <p>Conteúdo do Card 3</p>
-          </div>
-        
-          <!-- Card 4 -->
-          <div class="card">
-            <h3>Card 4</h3>
-            <p>Conteúdo do Card 4</p>
-          </div>
-        
-          <!-- Card 5 -->
-          <div class="card">
-            <h3>Card 5</h3>
-            <p>Conteúdo do Card 5</p>
-          </div>
-        
-          <!-- Card 6 -->
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
-          <div class="card">
-            <h3>Card 6</h3>
-            <p>Conteúdo do Card 6</p>
-          </div>
+         <ProductsGrid/>
         </div>
         <div class="shop-more">
           <a href="" class="btn dark w-button">Ver todos os produtos</a>
@@ -136,14 +82,39 @@
     </div>
 
 
+    <div class="carrousel6">
+    <div class="inf-text"><h1 class="inf-text">Procurando por um serviço?</h1></div>
+      <div class="inf-section">
+
+        <InfSection/>
+      </div>
+    </div>
+
+   <footer class="footer">
+    <div class="container-footer">
+        <img src="../assets/img/barratour2.png" alt="">
+        <div class="social-media"  >
+          <a class="social-media " href="">Insta</a>
+          <a class="social-media " href="">Facebook</a>
+          <a class="social-media " href="">whatz</a>
+        </div>
+    </div>
+    <div> Made by Gustavo.©2024.</div>
+   </footer>
 
   </div>
 
 </template>
 
 <script>
-
+import ProductsGrid from '../components/ProductsGrid.vue.vue'
+import InfSection from '../components/InfSection.vue.vue'
 export default {
+  components:{
+    ProductsGrid,
+    InfSection
+
+  },
   data() {
     return {
       backgrounds: [
@@ -177,28 +148,75 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.tracking-in-expand-fwd-bottom {
+	animation: tracking-in-expand-fwd-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 8px;
-  grid-row-gap: 12px;
-  justify-items: stretch;
-  align-items: stretch;
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }
 
+
+
+
+
+
+
+
+.social-media{
+
+  padding: 10px;
+}
+.container-footer{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer{
+  padding-top: 65px;
+  padding-bottom: 20px;
+  background-color: #222;
+  color: aliceblue;
+}
+
+
+.inf-text{
+  display: flex;
+  justify-content: center;
+  color: rgb(240, 235, 235);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.inf-section{
+justify-content: center;
+display: flex;
+background-color: #333;
+padding-top: 65px;
+padding-bottom: 65px;
+
+}
 
 .shop-more{
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 
 }
 .btn.dark{
@@ -223,6 +241,21 @@ export default {
   cursor: pointer;
   display: inline-block;
 }
+.h-button{
+  font-size: 25px;
+  color:#222;
+  background-color: white;
+  border: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  line-height: inherit;
+  padding-left: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
 
 .shop-button{
   display: flex;
@@ -278,23 +311,28 @@ margin-bottom: 15px;
 
 .shop-text-wraper{
   display: flex;
-  mix-blend-mode: 40px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding-bottom: 35px;
+
+
 }
 .suport-top-left{
   display: flex;
+  justify-content: center;
   flex-direction: column;
 
 }
 .details-shop{
+  font-size: 35px;
   text-transform: uppercase;
 }
 
 
 .products-section{
   padding-top: 65px;
-  padding-bottom: 65px
+  padding-bottom: 65px;
+  background-color: #333;
 }
 
 
@@ -350,11 +388,10 @@ h2{
 }
 
 .carrousel {
-  min-height: 550px;
   background-image: linear-gradient(10deg, #222, rgba(34, 34, 34, 0)), url(../assets/img/mulher-dancando.jpg);
   background-position: 0px 0px, 30% 30%;
   background-size: auto, cover;
-  min-height: 650px;
+  min-height: 950px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -365,6 +402,8 @@ h2{
   min-height: 650px;
   padding-right: 15px;
   padding-left: 15px;
+  background-color: rgb(240, 235, 235);
+
 }
 .carrousel3 {
   min-height: 550px;
@@ -374,7 +413,8 @@ h2{
   padding-right: 15px;
   padding-left: 15px;
   background-image: linear-gradient(400deg, #222, rgba(34, 34, 34, 0)), url(../assets/img/mulher-praia.jpg);
-  background-color: #333;
+  background-color: rgb(240, 235, 235);
+
 }
 .carrousel4{
   min-height: 550px;
@@ -383,7 +423,26 @@ h2{
   min-height: 650px;
   padding-right: 15px;
   padding-left: 15px;
-  background-color: white;
+  background-color: rgb(240, 235, 235);
+}
+.carrousel5{
+  min-height: 550px;
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  min-height: 650px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #333
+
+}
+.carrousel6{
+  min-height: 550px;
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  min-height: 650px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #333
 
 }
 
@@ -396,9 +455,9 @@ h2{
 }
 
 .header {
-  line-height: 1.2;
+  line-height: 1.0;
   font-family: Sen, sans-serif;
-  font-size: 70px;
+  font-size: 100px;
   color: white;
   margin-right: auto;
   margin-left: auto;
@@ -406,5 +465,6 @@ h2{
   padding-right: 15px;
   padding-left: 15px;
 }
+
 
 </style>
