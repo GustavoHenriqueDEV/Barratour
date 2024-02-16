@@ -30,24 +30,36 @@
   <div class="comerce-section">
     <div class="carrousel2">
       <div class="suport-top" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }" >
-        <h2>Descubra os melhores da cidade</h2>
+        <h4>Esse é o seu lugar</h4>
+        <h2>Descubra O Melhor Da Cidade</h2>
       <div class="suport-left">
       <div class="suport-wrapper">
         <div id="div" class="suport-column">
           <div class="suport-square">
-            <div class="suport-square-text">Nome-do-comercio</div>
+            <div class="suport-square-text"></div>
+            <h3 class="square-text">Hotelaria</h3>
           </div>
         </div>
         <div id="div" class="suport-column">
           <div class="suport-square">
-            <div class="suport-square-text">Nome-do-comercio</div>
+            <div class="suport-square-text1"></div>
+            <h3 class="square-text">Turismo</h3>
+        
           </div>
         </div>
         <div id="div" class="suport-column">
           <div class="suport-square">
-            <div class="suport-square-text">Nome-do-comercio</div>
+            <div class="suport-square-text2"></div>
+            <h3 class="square-text">Restaurantes</h3>
           </div>
         </div>
+        <div id="div" class="suport-column">
+          <div class="suport-square">
+            <div class="suport-square-text3"></div>
+            <h3 class="square-text">Bares</h3>
+          </div>
+        </div>
+        
       </div>
       </div>
       </div>
@@ -116,7 +128,6 @@ export default {
   },
   data() {
     return {
-
       isScrolled:false,
       backgrounds: [
         require('../assets/img/casal.jpg'),
@@ -126,13 +137,9 @@ export default {
     };
   },
   mounted() {
-
-
     if (typeof window !== 'undefined') {
             window.addEventListener('scroll', this.handleScroll);
         }
-
-   
   },
   beforeUnmount() {
     if (typeof window !== 'undefined') {
@@ -140,7 +147,6 @@ export default {
         }
   },
   methods: {
-
     scrollToTarget(event) {
       event.preventDefault();
       const targetSection = document.getElementById('targetSection');
@@ -157,7 +163,6 @@ export default {
       }
     },
      
-    
       handleScroll(){
         this.isScrolled = window.scrollY > 0
       }
@@ -167,6 +172,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
 
@@ -174,6 +181,36 @@ export default {
   opacity: 0; /* Inicialmente, define a opacidade para 0 */
 }
 
+.suport-square-text{
+  background-image: url("../assets/img/sino.jpg");
+  height: 300px;
+  width: 300px;
+  
+  background-position: 50% 90%; 
+  background-size: cover;
+  
+}
+.suport-square-text1{
+  background-image: url("../assets/img/barco.jpg");
+  height: 300px;
+  width: 300px;
+  background-position: 50% 90%; 
+  background-size: cover;
+}
+.suport-square-text2{
+  background-image: url("../assets/img/peixe.jpg");
+  height: 300px;
+  width: 300px;
+  background-position: 50% 90%; 
+  background-size: cover;
+}
+.suport-square-text3{
+  background-image: url("../assets/img/cerveja.jpg");
+  height: 300px;
+  width: 300px;
+  background-position: 50% 90%; 
+  background-size: cover;
+}
 
 .tracking-in-expand-fwd-bottom {
 	animation: tracking-in-expand-fwd-bottom 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -218,17 +255,6 @@ export default {
     opacity: 1;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .social-media{
 
@@ -406,40 +432,63 @@ margin-bottom: 15px;
   line-height: 65px;
 }
 
+.square-text{
+
+    letter-spacing: 2px;
+    font-family: 'Libre Bodoni',Georgia,"Times New Roman",serif;
+    font-size: 25px;
+    color: #2b2d42!important;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+
 .suport-square{
+  
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: #09d457;
-  display: flex;
   overflow: hidden;
   min-height: 350px;
+  width: 350px;
   margin-bottom: 45px;
   justify-content: center;
- align-items: center;
+  align-items: center;
   border-radius: 5px;
-  background-color: #222;
+  background-color: rgb(240, 235, 235);
+  box-shadow: 0px 10px 80px 0px rgba(0,0,0,0.1);
 }
 
 
 h2{
-  padding-top: 20px;
-  color: #333;
-  padding-bottom: 20px;
+  font-family: 'Libre Bodoni',Georgia,"Times New Roman",serif;
   font-size: 50px;
-  line-height: 1.2;
+  color: #2b2d42!important;
+  padding-bottom: 100px;
   display: flex;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   justify-content: center;
+}
+h4{
+    font-family: 'Plus Jakarta Sans',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #c77a63!important;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .suport-wrapper{
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
 }
 .suport-column{
-  width: 30%;
   min-height: 200px;
 }
 
@@ -455,9 +504,12 @@ h2{
   min-height: 550px;
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
-  min-height: 650px;
+  min-height: 950px;
   padding-right: 15px;
   padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgb(240, 235, 235);
 
 }
@@ -501,7 +553,6 @@ h2{
   background-color: #333
 
 }
-
 .container {
   max-width: 1200px;
   margin-right: auto;
@@ -509,7 +560,6 @@ h2{
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .header {
   line-height: 1.0;
   font-family: Sen, sans-serif;
@@ -521,6 +571,4 @@ h2{
   padding-right: 15px;
   padding-left: 15px;
 }
-
-
 </style>
