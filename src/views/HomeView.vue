@@ -1,5 +1,7 @@
 <template lang="">
   <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <div class="carrousel" id="carousel">
       <div class="appbar">
         <div class="menu">
@@ -80,7 +82,9 @@
       <div class="carrousel4">
         <div class="shop-text-wraper">
           <div class="suport-top-left">
-            <div class="details-shop">Produtos Disponiveis em comercios locais</div>
+          <h4>Procurando por um produto especifico?</h4>
+
+            <div class="details-shop">Produtos Disponiveis Em Comercios Locais</div>
           </div>
         </div>
         <div class="products-grid">
@@ -175,6 +179,45 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+
+
+@media only screen and (max-width: 768px) {
+
+      .appbar{
+        padding-left: 25px;
+      }
+    
+
+     .header {
+
+        font-size: 30px !important; // Adicione !important para garantir prioridade
+      }
+      .carrousel{
+        min-height: 400px!important;/* Altura ajustada para telas menores */
+        max-width: 100%!important; /* Largura ajustada para telas menores */
+        background-size: cover !important; // Ou outra propriedade que se adeque às suas necessidades
+        background-position: 0px 0px, 30% 30% !important;
+      }
+
+      .btn.h-button {
+        font-size: 15px;
+        margin-top: 5px;
+      }
+      .link-menu{
+        display: none;
+
+      }
+      
+    }
+
+
+
+
+
+
+
+
 
 
 .tracking-in-expand-fwd-bottom {
@@ -406,8 +449,10 @@ margin-bottom: 15px;
 
 }
 .details-shop{
-  font-size: 35px;
-  text-transform: uppercase;
+  font-family: 'Libre Bodoni',Georgia,"Times New Roman",serif;
+  font-size: 50px;
+  color: #2b2d42!important;
+  letter-spacing: 2px;
 }
 
 
@@ -528,7 +573,7 @@ h4{
   min-height: 550px;
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
-  min-height: 650px;
+  min-height: 950px;
   padding-right: 15px;
   padding-left: 15px;
   background-color: rgb(240, 235, 235);
