@@ -187,7 +187,9 @@ export default {
       .appbar{
         padding-left: 25px;
       }
-    
+      .carrousel2{
+        align-items: center;
+      }
 
      .header {
         font-size: 30px !important; // Adicione !important para garantir prioridade
