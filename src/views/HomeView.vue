@@ -33,7 +33,7 @@
     <div class="carrousel2">
       <div class="suport-top" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }" >
         <h4>Esse é o seu lugar</h4>
-        <h2>Descubra O Melhor Da Cidade</h2>
+        <h2>O Melhor Da Cidade</h2>
       <div class="suport-left">
       <div class="suport-wrapper">
         <div id="div" class="suport-column">
@@ -70,9 +70,9 @@
     <div class="helper-section">
       <div class="carrousel3">
         <div class="helper-suport-text" >
-        <h3 class="helper-text" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }">Tudo que você precisa
+        <h3 class="helper-text" :class="{'tracking-in-expand-fwd-bottom2': isScrolled }">Tudo Que Você Precisa
           <br>
-          Em um só lugar
+          Em Um Só Lugar
         </h3>
         </div>
       </div>
@@ -190,7 +190,6 @@ export default {
     
 
      .header {
-
         font-size: 30px !important; // Adicione !important para garantir prioridade
       }
       .carrousel{
@@ -208,14 +207,37 @@ export default {
         display: none;
 
       }
+      /* section 2, !melhor da cidade! */
+
+      .suport-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+      }
+
+      .suport-top{
+        padding-top: 2rem;
+      }
+      .suport-top h4{
+        font-size: 10px;
+      }
+      .suport-top h2{
+        padding-left: 10px;
+        font-size: 20px;
+        padding-bottom: 1rem;
+      }
+      /* section 3, !tudo que vc precisa! */
+    
       
+
+
+      .helper-text {
+        margin-top: 11rem !important;
+        font-size: 40px !important;
+        margin-left: 1px !important;
+      }
+         /* section 4, !Produtos em comercios locais! */
     }
-
-
-
-
-
-
 
 
 
@@ -228,7 +250,7 @@ export default {
   background-image: url("../assets/img/sino.jpg");
   height: 300px;
   width: 300px;
-  
+
   background-position: 50% 90%; 
   background-size: cover;
   
@@ -527,9 +549,14 @@ h4{
     text-align: center;
 }
 
+.suport-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .suport-wrapper{
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
     display: flex;
     justify-content: space-between;
 }
@@ -610,9 +637,9 @@ h4{
   font-family: Sen, sans-serif;
   font-size: 100px;
   color: white;
+  margin-top: 200px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 10rem;
   padding-right: 15px;
   padding-left: 15px;
 }
