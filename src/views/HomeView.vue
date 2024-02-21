@@ -114,7 +114,7 @@
           <a class="social-media " href="">whatz</a>
         </div>
     </div>
-    <div> Made by Gustavo.©2024.</div>
+    <div class="made"> Made by Gustavo.©2024.</div>
    </footer>
 
   </div>
@@ -212,7 +212,6 @@ export default {
       .suport-wrapper{
         display: flex;
         flex-direction: column;
-        padding-left: 5px;
       }
 
       .suport-top{
@@ -246,6 +245,38 @@ export default {
         letter-spacing: 1px !important;
         
       }
+      .products-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1px;
+      }
+       /* section 5, !Procurando por um serviço */
+       .inf-text{
+        font-size: 20px !important;
+       }
+       .inf-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center !important; 
+        gap: 10px;
+        justify-content: center !important;
+        margin-left: 1px !important;
+       }
+       /*footer */
+       .container-footer{
+       }
+       .social-media{
+        font-size: 10px;
+       }
+       .container-footer img{
+        margin-left: 0px;
+        height: 30px;
+       }
+       .made{
+        padding-top: 33px;
+        font-size: 10px;
+       }
     }
 
 
