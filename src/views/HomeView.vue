@@ -184,6 +184,14 @@ export default {
 
 @media only screen and (max-width: 768px) {
 
+
+
+
+      .carrousel3{
+        background-repeat: no-repeat !important;;
+
+      }
+
       .appbar{
         padding-left: 25px;
       }
