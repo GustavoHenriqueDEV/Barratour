@@ -257,11 +257,12 @@ export default {
         
       }
       .products-grid{
-        justify-content: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 1px;
+        justify-content: center !important;
+
       }
        /* section 5, !Procurando por um serviço */
        .inf-text{
@@ -292,6 +293,11 @@ export default {
     }
 
 
+
+.products-grid{
+  justify-content: center !important;
+
+}
 
 
 .tracking-in-expand-fwd-bottom {
