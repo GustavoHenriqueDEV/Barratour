@@ -98,7 +98,7 @@
 
 
     <div class="carrousel6" >
-    <div  id="targetSection" class="inf-text"><h1 class="inf-text">Procurando por um serviço?</h1></div>
+    <div  id="targetSection" class="inf-text"><h1 class="inf-text">Serviços Disponíveis</h1></div>
       <div class="inf-section">
 
         <InfSection/>
@@ -200,6 +200,7 @@ export default {
       }
 
      .header {
+        margin-top: 10px !important;
         font-size: 30px !important; // Adicione !important para garantir prioridade
       }
       .carrousel{
@@ -256,6 +257,7 @@ export default {
         
       }
       .products-grid{
+        justify-content: center;
         display: flex;
         flex-direction: column;
         align-items: center;
