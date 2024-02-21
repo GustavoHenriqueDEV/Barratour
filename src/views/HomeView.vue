@@ -84,7 +84,7 @@
           <div class="suport-top-left">
           <h4>Procurando por um produto especifico?</h4>
 
-            <div class="details-shop">Produtos Disponiveis Em Comercios Locais</div>
+            <div class="details-shop">Disponiveis Em Comercios Locais</div>
           </div>
         </div>
         <div class="products-grid">
@@ -237,6 +237,15 @@ export default {
         margin-left: 1px !important;
       }
          /* section 4, !Produtos em comercios locais! */
+      .suport-top-left h4{
+        font-size: 10px;
+
+         }
+      .details-shop{
+        font-size: 20px !important;
+        letter-spacing: 1px !important;
+        
+      }
     }
 
 
