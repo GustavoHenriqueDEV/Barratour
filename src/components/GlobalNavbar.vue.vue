@@ -39,10 +39,6 @@ a{
 
   }
 
-img{
-    margin-left: 70px;
-    width: 150px;
-}
 
 
 

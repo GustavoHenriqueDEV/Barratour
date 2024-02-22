@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
   background-position: 50% 90%;
   background-size: cover;
@@ -52,7 +52,7 @@ export default {
   justify-items: stretch;
   align-items: stretch;
 }
-p{
+ p{
   
   display: flex;
   justify-content: center;
