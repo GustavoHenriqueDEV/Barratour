@@ -22,9 +22,7 @@
               </p>
             </div>
             <div class="inf-hotel-wrapper">
-              <p class="inf-hotel-wrapper">
-                Lorem ipsum dolor sit amet. Aqwdqwdasdas
-              </p>
+        
             </div>
             <div class="btn-wrapper">
               <a href="" class="">
@@ -143,18 +141,31 @@
     display: flex;
     flex-direction: column !important;
   }
+  .header-hotel{
+    font-size: 40px !important;
+  }
+  .star-img{
+    max-width: 40px !important;
+  }
+  .second-header-hotel{
+    font-size: 11px !important;
+  }
+  .best-card{
+    width: 300px !important;
+    margin-left: 40px;
+    height: 510px !important;
+    
+  }
+  .price-wrapper{
+    width: 200px !important;
+  }
+  .inf-hotel-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .show-more-hotel{
   
@@ -259,7 +270,8 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 1px 13px 11px rgba(0, 0, 0, 0.1);
+
     display: flex;
     flex-direction: column;
     margin-top: 10px;

@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .card {
   background-position: 50% 90%;
   background-size: cover;

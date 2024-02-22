@@ -176,7 +176,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
@@ -184,9 +184,6 @@ export default {
 
 
 @media only screen and (max-width: 768px) {
-
-
-
 
       .carrousel3{
         background-repeat: no-repeat !important;;
@@ -201,7 +198,7 @@ export default {
       }
 
      .header {
-        margin-top: 10px !important;
+        margin-top: 20px !important;
         font-size: 30px !important; // Adicione !important para garantir prioridade
       }
       .carrousel{
@@ -259,7 +256,7 @@ export default {
       }
       .products-grid{
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
         margin-left: 1px;
         justify-content: center !important;
@@ -278,18 +275,30 @@ export default {
         margin-left: 1px !important;
        }
        /*footer */
-       .container-footer{
+       .container{
+          padding-left: 1px !important;
        }
+       
        .social-media{
         font-size: 10px;
        }
        .container-footer img{
         margin-left: 0px;
-        height: 30px;
        }
        .made{
         padding-top: 33px;
         font-size: 10px;
+       }
+       .suport-square{
+        width: 330px !important;
+       }
+
+       .card{
+        height: 200px;
+        width: 230px !important;
+       }
+       .insta{
+        width: 20px !important;
        }
     }
 
