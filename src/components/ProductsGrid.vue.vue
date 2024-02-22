@@ -34,8 +34,8 @@ export default {
 .card {
   background-position: 50% 90%;
   background-size: cover;
-  height: 300px;
-  width: 250px;
+  height: 400px;
+  width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -46,7 +46,6 @@ export default {
 }
 
 .products-grid {
-  margin-left: 90px;
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;

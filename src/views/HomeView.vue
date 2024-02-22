@@ -3,16 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <div class="carrousel" id="carousel">
-      <div class="appbar">
+      <div id="targetSection2" class="appbar">
         <div class="menu">
             <img src="../assets/img/barratour2.png" alt="">
-            <div class="link-menu">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Comerce</a>
-                <a href="">Donate</a>  
-                <a href="">Contact</a>
-            </div>
         </div>
     </div>
 
@@ -23,7 +16,7 @@
           Barra do Sul
           <br>
           Em um só lugar
-
+          <br>
         </h1>
         <a href="" class="btn  h-button tracking-in-expand-fwd-bottom" @click="scrollToTarget">Descubra os serviços</a>
       </div>
@@ -109,9 +102,15 @@
     <div class="container-footer">
         <img src="../assets/img/barratour2.png" alt="">
         <div class="social-media"  >
-          <a class="social-media " href="">Insta</a>
-          <a class="social-media " href="">Facebook</a>
-          <a class="social-media " href="">whatz</a>
+          <a class="insta" href="">
+            <img src="../assets/img/Instagram.png" alt="">
+          </a>
+          <a class="facebook" href="">
+            <img src="../assets/img/facebook.png" alt="">
+          </a>
+          <a class="what " href="">
+            <img src="../assets/img/zap.png" alt="">
+          </a>
         </div>
     </div>
     <div class="made"> Made by Gustavo.©2024.</div>
@@ -155,9 +154,11 @@ export default {
       event.preventDefault();
       const targetSection = document.getElementById('targetSection');
 
-      if (targetSection) {
+
+      if (targetSection ) {
         // Opções para o comportamento da rolagem
         const options = {
+
           top: targetSection.offsetTop,
           behavior: 'smooth', // rolar suavemente
         };
@@ -379,9 +380,23 @@ export default {
   }
 }
 
-.social-media{
+.insta img{
+  width: 40px;
+  background-size: cover;
+  background-position: 20% 10% 10% 10%;
+}
+.facebook img{
+  width: 40px;
 
-  padding: 10px;
+  background-size: cover;
+  background-position: 10% 10% 10% 10%;
+}
+
+.what img{
+  width: 40px;
+
+  background-size: cover;
+  background-position: 10% 10% 10% 10%;
 }
 .container-footer{
     max-width: 1200px;
@@ -575,8 +590,8 @@ margin-bottom: 15px;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  min-height: 350px;
-  width: 350px;
+  min-height: 400px;
+  width: 400px;
   margin-bottom: 45px;
   justify-content: center;
   align-items: center;
@@ -616,7 +631,7 @@ h4{
 .suport-wrapper{
     justify-content: center;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 }
 .suport-column{
   min-height: 200px;
@@ -685,10 +700,7 @@ h4{
 }
 .container {
   max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 205px;
 }
 .header {
   line-height: 1.0;
@@ -698,7 +710,6 @@ h4{
   margin-top: 200px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  
 }
 </style>
