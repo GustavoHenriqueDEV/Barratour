@@ -6,7 +6,6 @@
       </div>
       <div class="second-header-hotel">Best Of City</div>
     </div>
-    <div class="hotel-container">
       <div class="city-hotel-grid">
         <div class="best-card">
             <span class="img-wrapper">
@@ -113,7 +112,6 @@
 
       </div>
 
-    </div>
     <div class="show-more-hotel">
       <a href="" class="btn-hotel">Ver todos</a>
     </div>
@@ -136,6 +134,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .city-hotel-grid{
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .show-more-hotel{
   
     display: flex;
@@ -144,7 +164,6 @@
     padding-bottom: 20px;
   
 }
-
 .stars{
   position: relative;
   justify-content: center;
@@ -266,6 +285,7 @@
   }
 
   .city-hotel-grid {
+    justify-content: center;
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
