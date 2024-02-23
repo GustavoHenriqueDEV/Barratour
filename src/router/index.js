@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BestOfCitySection from '../views/BestOfCitySection.vue'
-
+import ShowMoreHotel from '../views/ShowMoreHotel.vue'
 const routes = [
   {
     path: '/',
@@ -21,6 +21,14 @@ const routes = [
     path:'/BestOfCity',
     name:'best-of-city',
     component:BestOfCitySection
+
+
+  },
+  {
+
+    path:'/ShowMoreHotel',
+    name:'ShowMoreHotel',
+    component:ShowMoreHotel
 
 
   }

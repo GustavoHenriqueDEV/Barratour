@@ -155,7 +155,7 @@
             </a>
           </div>
         </div>
-        <div id="more" class="best-card more-element">
+        <div id="more" class=" more-element best-card">
             <span class="img-wrapper">
                 <img class="img-content" src="../assets/img/sino.jpg" alt="">
             </span>
@@ -213,7 +213,7 @@
       const moreElements = document.querySelectorAll('.more-element');
 
       moreElements.forEach(element => {
-        element.style.display = this.showMore ? 'flex' : 'none';
+        element.style.display = this.showMore ? 'none' : 'flex';
       });
     },
   },
@@ -259,9 +259,8 @@
   }
 
 }
-
-#more{
-  display: flex;
+.more-element{
+  display: none ;
 }
 
 

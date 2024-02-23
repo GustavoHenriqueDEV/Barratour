@@ -306,7 +306,24 @@ export default {
         width: 20px !important;
        }
     }
-
+    .fade-out-enter-active, .fade-out-leave-active {
+      transition: opacity 3s;
+    }
+    .fade-out-enter, .fade-out-leave-to {
+      opacity: 1;
+    }
+    
+    /* Classe para a transição de entrada (quando a nova rota está entrando) */
+    .fade-in-enter-active, .fade-in-leave-active {
+      transition: opacity 3s;
+    }
+    .fade-in-enter, .fade-in-leave-to {
+      opacity: 0;
+    }
+    .fade-in-enter-to, .fade-in-leave {
+      opacity: 10;
+    }
+    
 
 
 .products-grid{
