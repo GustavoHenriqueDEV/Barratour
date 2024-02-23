@@ -369,7 +369,8 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: inset 0px 1px 13px 11px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 20px 16px rgba(0, 0, 0, 0.1);
+
     display: flex;
     flex-direction: column;
     margin-top: 10px;

@@ -30,7 +30,7 @@
       <div class="suport-left">
       <div class="suport-wrapper">
         <div id="div" class="suport-column">
-          <div class="suport-square">
+          <div @click="navigateToBestOfCity()" class="suport-square">
             <div class="suport-square-text"></div>
             <h3 class="square-text">Hotelaria</h3>
           </div>
@@ -121,6 +121,7 @@
 </template>
 
 <script>
+
 import ProductsGrid from '../components/ProductsGrid.vue.vue'
 import InfSection from '../components/InfSection.vue.vue'
 export default {
@@ -170,7 +171,11 @@ export default {
      
       handleScroll(){
         this.isScrolled = window.scrollY > 0
-      }
+      },
+
+      navigateToBestOfCity() {
+      this.$router.push({ name: 'best-of-city' });
+    },
   }
 };
 

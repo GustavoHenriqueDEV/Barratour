@@ -19,7 +19,7 @@ const routes = [
   {
 
     path:'/BestOfCity',
-    name:'BestOfCity',
+    name:'best-of-city',
     component:BestOfCitySection
 
 
