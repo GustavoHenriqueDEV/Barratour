@@ -8,6 +8,81 @@
     </div>
       <div class="city-hotel-grid">
         <div class="best-card">
+          <span class="img-wrapper">
+              <img class="img-content" src="../assets/img/sino.jpg" alt="">
+          </span>
+          <div class="price-wrapper">
+            <div class="price-content">
+                <p>80/Dia</p>
+            </div>
+        </div>
+        <div class="name-wrapper">
+          <p class="name-wrapper">
+            Bandeirantes
+          </p>
+        </div>
+        <div class="inf-hotel-wrapper">
+          <p class="inf-hotel-wrapper">
+            Lorem ipsum dolor sit amet. Aqwdqwdasdas
+          </p>
+        </div>
+        <div class="btn-wrapper">
+          <a href="" class="">
+            <button class="btn-see-more">VEJA MAIS</button>
+          </a>
+        </div>
+      </div>
+      <div class="best-card">
+        <span class="img-wrapper">
+            <img class="img-content" src="../assets/img/sino.jpg" alt="">
+        </span>
+        <div class="price-wrapper">
+          <div class="price-content">
+              <p>80/Dia</p>
+          </div>
+      </div>
+      <div class="name-wrapper">
+        <p class="name-wrapper">
+          Bandeirantes
+        </p>
+      </div>
+      <div class="inf-hotel-wrapper">
+        <p class="inf-hotel-wrapper">
+          Lorem ipsum dolor sit amet. Aqwdqwdasdas
+        </p>
+      </div>
+      <div class="btn-wrapper">
+        <a href="" class="">
+          <button class="btn-see-more">VEJA MAIS</button>
+        </a>
+      </div>
+    </div>
+    <div class="best-card">
+      <span class="img-wrapper">
+          <img class="img-content" src="../assets/img/sino.jpg" alt="">
+      </span>
+      <div class="price-wrapper">
+        <div class="price-content">
+            <p>80/Dia</p>
+        </div>
+    </div>
+    <div class="name-wrapper">
+      <p class="name-wrapper">
+        Bandeirantes
+      </p>
+    </div>
+    <div class="inf-hotel-wrapper">
+      <p class="inf-hotel-wrapper">
+        Lorem ipsum dolor sit amet. Aqwdqwdasdas
+      </p>
+    </div>
+    <div class="btn-wrapper">
+      <a href="" class="">
+        <button class="btn-see-more">VEJA MAIS</button>
+      </a>
+    </div>
+  </div>
+        <div class="best-card">
             <span class="img-wrapper">
                 <img  class="img-content" src="../assets/img/sino.jpg" alt="">
             </span>
@@ -55,7 +130,7 @@
             </a>
           </div>
         </div>
-        <div class="best-card">
+        <div class="best-card more-element">
             <span class="img-wrapper">
                 <img class="img-content" src="../assets/img/sino.jpg" alt="">
             </span>
@@ -80,7 +155,7 @@
             </a>
           </div>
         </div>
-        <div class="best-card">
+        <div id="more" class="best-card more-element">
             <span class="img-wrapper">
                 <img class="img-content" src="../assets/img/sino.jpg" alt="">
             </span>
@@ -99,11 +174,13 @@
               Lorem ipsum dolor sit amet. Aqwdqwdasdas
             </p>
           </div>
+          
           <div class="btn-wrapper">
             <a href="" class="">
               <button class="btn-see-more">VEJA MAIS</button>
             </a>
           </div>
+          
         </div>
 
 
@@ -111,7 +188,7 @@
       </div>
 
     <div class="show-more-hotel">
-      <a href="" class="btn-hotel">Ver todos</a>
+      <a @click.prevent="toggleMore()" href="" class="btn-hotel">Ver todos</a>
     </div>
     <div class="lastSection"></div>
   </template>
@@ -121,10 +198,26 @@
     name: 'ProductsGrid',
     data() {
       return {
+        showMore : false,
+
       
       };
-    }
-  };
+    },
+    methods: {
+    toggleMore(event) {
+      if (event) {
+        event.preventDefault();
+      }
+
+      this.showMore = !this.showMore; 
+      const moreElements = document.querySelectorAll('.more-element');
+
+      moreElements.forEach(element => {
+        element.style.display = this.showMore ? 'block' : 'none';
+      });
+    },
+  },
+};
   </script>
   
   <style lang="scss">
@@ -166,6 +259,12 @@
   }
 
 }
+
+#more{
+  display: flex;
+}
+
+
 
 .show-more-hotel{
   
@@ -271,7 +370,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: inset 0px 1px 13px 11px rgba(0, 0, 0, 0.1);
-
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -303,6 +401,7 @@
     grid-gap: 20px;
     justify-items: stretch;
     align-items: stretch;
+    flex-wrap: wrap;
   }
 
   p {
