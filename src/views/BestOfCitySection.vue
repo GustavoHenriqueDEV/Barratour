@@ -213,7 +213,7 @@
       const moreElements = document.querySelectorAll('.more-element');
 
       moreElements.forEach(element => {
-        element.style.display = this.showMore ? 'block' : 'none';
+        element.style.display = this.showMore ? 'flex' : 'none';
       });
     },
   },
