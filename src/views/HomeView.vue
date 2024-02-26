@@ -18,6 +18,8 @@
           Em um só lugar
           <br>
         </h1>
+
+
         <a href="" class="btn  h-button tracking-in-expand-fwd-bottom" @click="scrollToTarget">Descubra os serviços</a>
       </div>
     </div>
@@ -175,7 +177,9 @@ export default {
 
       navigateToBestOfCity() {
       this.$router.push({ name: 'best-of-city' });
+
     },
+    
   }
 };
 

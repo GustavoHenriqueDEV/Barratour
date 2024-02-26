@@ -28,7 +28,7 @@
         </div>
         <div class="btn-wrapper">
           <a href="" class="">
-            <button class="btn-see-more">VEJA MAIS</button>
+            <button @click.prevent="navigateToShowMoreHotel()"  class="btn-see-more">VEJA MAIS</button>
           </a>
         </div>
       </div>
@@ -216,6 +216,12 @@
         element.style.display = this.showMore ? 'none' : 'flex';
       });
     },
+    navigateToShowMoreHotel(){
+        this.$router.push({name:'ShowMoreHotel'})
+      }
+
+
+
   },
 };
   </script>
