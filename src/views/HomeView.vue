@@ -329,7 +329,13 @@ export default {
     }
     
 
+.suport-column :hover{
+  background-color: #33333333;
+}
 
+
+
+    
 .products-grid{
   justify-content: center !important;
 
