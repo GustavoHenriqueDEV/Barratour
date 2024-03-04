@@ -1,5 +1,8 @@
 <template lang="">
     <div class="body">
+        <div class="hotel-appbar">
+            <img src="" alt="BarraTourLogo">
+        </div>
         <div class="text-hotel-wrapper">
             <div class="text-suport">
                 Nome do Hotel
@@ -9,25 +12,25 @@
         <div class="hotel-content">
             <div class="container-hotel">
                 <div class="image1a1-wraper">
-                    <img class="imagem1a1" src="" alt="Uma imagem">
+                    <img class="imagem1a1" src="../assets/img/casa-exemplo.jpg" alt="Uma imagem">
                 </div>
                 <div class="second-collum" >
 
                     <div class="image1a2">
-                        <img src="" alt="a">
+                        <img class="image1a2" src="../assets/img/casa-exemplo2.jpg" alt="a">
                     </div>
                     <div class="image2a2">
-                        <img src="" alt="a">
+                        <img class="image2a2" src="../assets/img/casa-exemplo3.jpg" alt="a">
                     </div>
                 </div>
                 <div class="second-collum" >
 
 
                     <div class="image1a2">
-                        <img src="" alt="a">
+                        <img  class="image1a2" src="../assets/img/casa-exemplo3.jpg" alt="a">
                     </div>
                     <div class="image2a2">
-                        <img src="" alt="a">
+                        <img  class="image1a2" src="../assets/img/casa-exemplo3.jpg" alt="a">
                     </div>
                 </div>
                
@@ -44,13 +47,29 @@ export default {
     
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+
+.hotel-appbar{
+    height: 80px;
+    border-bottom: 1px solid grey;
+    padding-left: 700px;
+}
+
 .second-collum{
+    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.imagem1a1{
+    margin-left: 10px;
+
+    gap: 10px;
+    height: 560px;
+    width: 503px;
+
 }
 
 .hotel-content{
@@ -63,6 +82,21 @@ export default {
     width: 503px;
 }
 
+.image2a2{
+    margin-left: 10px;
+
+    gap: 10px;
+    height: 272px;
+    width: 243px;
+}
+
+
+.image1a2{
+    margin-left: 10px;
+    gap: 10px;
+    height: 272px;
+    width: 243px;
+}
 .text-hotel-wrapper{
     display: flex;
     justify-content: center;
@@ -76,6 +110,7 @@ export default {
     text-align: center;
 }
 .container-hotel{
+    justify-content: center;
     display: flex;
     width: 1903px;
     height: 570px;
