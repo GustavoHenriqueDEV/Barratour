@@ -6,6 +6,7 @@
 
         <h3>{{ card.title }}</h3>
         <p>{{ card.content }}</p>
+        
 
       </div>
    </div> 
