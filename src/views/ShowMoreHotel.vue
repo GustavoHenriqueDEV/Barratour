@@ -16,26 +16,55 @@
             </div>
             <div class="hotel-content-right">
                 <div class="image-right">
-                    <img class="image-content-right" src="" alt="a">
+                    <img class="image-content-right" src="../assets/img/casa-exemplo3.jpg" alt="a">
+                </div>
+                <div class="image-right">
+                    <img class="image-content-right" src="../assets/img/casa-exemplo3.jpg" alt="a">
+                </div>
+            </div>
+            <div class="hotel-content-right">
+                <div class="image-right">
+                    <img class="image-content-right" src="../assets/img/casa-exemplo3.jpg" alt="a">
+                </div>
+                <div class="image-right">
+                    <img class="image-content-right" src="../assets/img/casa-exemplo3.jpg" alt="a">
                 </div>
             </div>
         </div>
-        
     </div>
 </template>
 <script>
     export default {
+
     }
 </script>
 <style lang="scss" scoped>
+    .image-content-right,
+    .image-content-left {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .image-right{
+        margin-top:5px;
+        gap: 10px;
+    }
+
+    .image-content-right {
+        margin-bottom: 10px;
+        gap: 10px;
+        height: 100%;
+        /* Ajusta a altura para 100% */
+    }
     .hotel-appbar {
         height: 80px;
         border-bottom: 1px solid grey;
     }
 
-    .hotel-images-wrapper{
+    .hotel-images-wrapper {
         display: flex;
         justify-content: center;
+        gap: 10px;
     }
     .text-suport {
         font-family: 'Libre Bodoni', Georgia, "Times New Roman", serif;
@@ -48,22 +77,18 @@
         width: 100%;
         min-height: 100vh;
     }
-    .hotel-content-left{
+    .hotel-content-left {
+        display: flex;
         align-items: center;
-        background-color: red;
         justify-content: center;
-        height: 70vh;
+        height: 90vh;
         width: 60vh;
     }
-    .image-content-left{
-        height: 100px;
-        width: 100px;
-    }
-    .hotel-content-right{
+    .hotel-content-right {
         align-items: center;
-        background-color: rgb(38, 0, 255);
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        height: 70vh;
-        width: 60vh;
+        width: 50vh;
     }
 </style>
